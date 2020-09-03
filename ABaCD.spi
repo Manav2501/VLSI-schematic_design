@@ -1,0 +1,116 @@
+*** SPICE deck for cell ABaCD{lay} from library VLSI_Project1
+*** Created on Sat Nov 17, 2018 14:18:36
+*** Last revised on Sat Nov 17, 2018 15:43:01
+*** Written on Wed Nov 21, 2018 06:11:44 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** SUBCIRCUIT ABaCD FROM CELL VLSI_Project1:ABaCD{lay}
+.SUBCKT ABaCD A B C D gnd vdd Vout
+Mnmos@0 net@42 B#1nmos@0_poly-right gnd gnd N L=0.18U W=0.45U AS=0.405P AD=0.17P PS=3.15U PD=1.53U
+Mnmos@1 Vout A#1nmos@1_poly-right net@42 gnd N L=0.18U W=0.45U AS=0.17P AD=0.304P PS=1.53U PD=1.575U
+Mnmos@2 net@41 C#1nmos@2_poly-right Vout gnd N L=0.18U W=0.45U AS=0.304P AD=0.17P PS=1.575U PD=1.53U
+Mnmos@3 gnd D#1nmos@3_poly-right net@41 gnd N L=0.18U W=0.45U AS=0.17P AD=0.405P PS=1.53U PD=3.15U
+Mpmos@0 vdd B#0pmos@0_poly-left net@1 vdd P L=0.18U W=0.9U AS=0.506P AD=0.607P PS=2.475U PD=3.15U
+Mpmos@1 net@1 A#0pmos@1_poly-left vdd vdd P L=0.18U W=0.9U AS=0.607P AD=0.506P PS=3.15U PD=2.475U
+Mpmos@2 Vout C#0pmos@2_poly-left net@1 vdd P L=0.18U W=0.9U AS=0.506P AD=0.304P PS=2.475U PD=1.575U
+Mpmos@3 net@1 D#0pmos@3_poly-left Vout vdd P L=0.18U W=0.9U AS=0.304P AD=0.506P PS=1.575U PD=2.475U
+** Extracted Parasitic Capacitors ***
+C0 net@1 0 2.569fF
+C1 Vout 0 1.975fF
+C2 B 0 0.341fF
+C3 A 0 0.341fF
+C4 C 0 0.341fF
+C5 D 0 0.341fF
+** Extracted Parasitic Resistors ***
+R0 B#0pmos@0_poly-left B#0pmos@0_poly-left##0 9.441
+R1 B#0pmos@0_poly-left##0 B#0pmos@0_poly-left##1 9.441
+R2 B#0pmos@0_poly-left##1 B#0pmos@0_poly-left##2 9.441
+R3 B#0pmos@0_poly-left##2 B#0pmos@0_poly-left##3 9.441
+R4 B#0pmos@0_poly-left##3 B#0pmos@0_poly-left##4 9.441
+R5 B#0pmos@0_poly-left##4 B#0pmos@0_poly-left##5 9.441
+R6 B#0pmos@0_poly-left##5 B#0pmos@0_poly-left##6 9.441
+R7 B#0pmos@0_poly-left##6 B#0pmos@0_poly-left##7 9.441
+R8 B#0pmos@0_poly-left##7 B#0pmos@0_poly-left##8 9.441
+R9 B#0pmos@0_poly-left##8 B#0pmos@0_poly-left##9 9.441
+R10 B#0pmos@0_poly-left##9 B#1nmos@0_poly-right 9.441
+R11 A#0pmos@1_poly-left A#0pmos@1_poly-left##0 9.441
+R12 A#0pmos@1_poly-left##0 A#0pmos@1_poly-left##1 9.441
+R13 A#0pmos@1_poly-left##1 A#0pmos@1_poly-left##2 9.441
+R14 A#0pmos@1_poly-left##2 A#0pmos@1_poly-left##3 9.441
+R15 A#0pmos@1_poly-left##3 A#0pmos@1_poly-left##4 9.441
+R16 A#0pmos@1_poly-left##4 A#0pmos@1_poly-left##5 9.441
+R17 A#0pmos@1_poly-left##5 A#0pmos@1_poly-left##6 9.441
+R18 A#0pmos@1_poly-left##6 A#0pmos@1_poly-left##7 9.441
+R19 A#0pmos@1_poly-left##7 A#0pmos@1_poly-left##8 9.441
+R20 A#0pmos@1_poly-left##8 A#0pmos@1_poly-left##9 9.441
+R21 A#0pmos@1_poly-left##9 A#1nmos@1_poly-right 9.441
+R22 C#0pmos@2_poly-left C#0pmos@2_poly-left##0 9.441
+R23 C#0pmos@2_poly-left##0 C#0pmos@2_poly-left##1 9.441
+R24 C#0pmos@2_poly-left##1 C#0pmos@2_poly-left##2 9.441
+R25 C#0pmos@2_poly-left##2 C#0pmos@2_poly-left##3 9.441
+R26 C#0pmos@2_poly-left##3 C#0pmos@2_poly-left##4 9.441
+R27 C#0pmos@2_poly-left##4 C#0pmos@2_poly-left##5 9.441
+R28 C#0pmos@2_poly-left##5 C#0pmos@2_poly-left##6 9.441
+R29 C#0pmos@2_poly-left##6 C#0pmos@2_poly-left##7 9.441
+R30 C#0pmos@2_poly-left##7 C#0pmos@2_poly-left##8 9.441
+R31 C#0pmos@2_poly-left##8 C#0pmos@2_poly-left##9 9.441
+R32 C#0pmos@2_poly-left##9 C#1nmos@2_poly-right 9.441
+R33 D#0pmos@3_poly-left D#0pmos@3_poly-left##0 9.441
+R34 D#0pmos@3_poly-left##0 D#0pmos@3_poly-left##1 9.441
+R35 D#0pmos@3_poly-left##1 D#0pmos@3_poly-left##2 9.441
+R36 D#0pmos@3_poly-left##2 D#0pmos@3_poly-left##3 9.441
+R37 D#0pmos@3_poly-left##3 D#0pmos@3_poly-left##4 9.441
+R38 D#0pmos@3_poly-left##4 D#0pmos@3_poly-left##5 9.441
+R39 D#0pmos@3_poly-left##5 D#0pmos@3_poly-left##6 9.441
+R40 D#0pmos@3_poly-left##6 D#0pmos@3_poly-left##7 9.441
+R41 D#0pmos@3_poly-left##7 D#0pmos@3_poly-left##8 9.441
+R42 D#0pmos@3_poly-left##8 D#0pmos@3_poly-left##9 9.441
+R43 D#0pmos@3_poly-left##9 D#1nmos@3_poly-right 9.441
+R44 B#1nmos@0_poly-right B#1nmos@0_poly-right##0 8.525
+R45 B#1nmos@0_poly-right##0 B#1nmos@0_poly-right##1 8.525
+R46 B#1nmos@0_poly-right##1 B#1nmos@0_poly-right##2 8.525
+R47 B#1nmos@0_poly-right##2 B#1nmos@0_poly-right##3 8.525
+R48 B#1nmos@0_poly-right##3 B#1nmos@0_poly-right##4 8.525
+R49 B#1nmos@0_poly-right##4 B 8.525
+R50 A#1nmos@1_poly-right A#1nmos@1_poly-right##0 8.525
+R51 A#1nmos@1_poly-right##0 A#1nmos@1_poly-right##1 8.525
+R52 A#1nmos@1_poly-right##1 A#1nmos@1_poly-right##2 8.525
+R53 A#1nmos@1_poly-right##2 A#1nmos@1_poly-right##3 8.525
+R54 A#1nmos@1_poly-right##3 A#1nmos@1_poly-right##4 8.525
+R55 A#1nmos@1_poly-right##4 A 8.525
+R56 C#1nmos@2_poly-right C#1nmos@2_poly-right##0 8.525
+R57 C#1nmos@2_poly-right##0 C#1nmos@2_poly-right##1 8.525
+R58 C#1nmos@2_poly-right##1 C#1nmos@2_poly-right##2 8.525
+R59 C#1nmos@2_poly-right##2 C#1nmos@2_poly-right##3 8.525
+R60 C#1nmos@2_poly-right##3 C#1nmos@2_poly-right##4 8.525
+R61 C#1nmos@2_poly-right##4 C 8.525
+R62 D#1nmos@3_poly-right D#1nmos@3_poly-right##0 8.525
+R63 D#1nmos@3_poly-right##0 D#1nmos@3_poly-right##1 8.525
+R64 D#1nmos@3_poly-right##1 D#1nmos@3_poly-right##2 8.525
+R65 D#1nmos@3_poly-right##2 D#1nmos@3_poly-right##3 8.525
+R66 D#1nmos@3_poly-right##3 D#1nmos@3_poly-right##4 8.525
+R67 D#1nmos@3_poly-right##4 D 8.525
+.ENDS ABaCD
+
+
+
